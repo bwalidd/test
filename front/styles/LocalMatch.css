@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/diablo');
+
+.bodyy {
+    font-family: 'Ga Maamli', sans-serif;
+    background: url('../images/lloginpic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.789);
+    z-index: 1;
+}
+
+canvas {
+    display: block;
+    background: transparent; /* Grey to black gradient */
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.3);
+    width: 70%;
+    height: 60%;
+    /* margin-top: 100px; */
+}
+
+.game-container {
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 4px rgba(255, 0, 0, 0.6); /* Vibrant red border */
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Black to grey gradient */
+    gap: 60px;
+    padding: 20px;
+    animation: pulse-border 2s infinite;
+    z-index: 2;
+    transition: transform 0.5s ease;
+    transform: scale(0.9);
+}
+
+@keyframes pulse-border {
+    0%, 100% {
+        border-color: #e20303c6; /* Red */
+        box-shadow: 0px 10px 20px rgba(148, 0, 0, 0.619);
+    }
+    50% {
+        border-color: #ff0000c6; /* Darker red */
+        box-shadow: 0px 10px 30px rgba(227, 2, 2, 0.619);
+    }
+}
+
+.game-over-text {
+    font-size: 3rem;
+    color: #ff0000; /* Vibrant red */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(179, 0, 0, 0.8);
+    animation: glow-text 1.5s infinite;
+}
+
+@keyframes glow-text {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(179, 0, 0, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(179, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 1);
+    }
+}
+
+.go-to-tournament-btn {
+    position: absolute;
+    padding: 10px;
+    display: inline-block;
+    font-size: 30px;
+    background-color: #1a1919d7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    white-space: wrap;
+    bottom: 20px;
+}
+
+.go-to-tournament-btn:hover {
+    background-color: #cc0000;
+}
+
+.game-instruction {
+    color: transparent; /* Transparent color to reveal gradient */
+    font-size: 35px;
+    font-weight: 100;
+    text-shadow: rgba(255, 255, 255, 0.187) 1px 0 2px;
+    background: linear-gradient(90deg, #ef6542, #a8752a); /* Initial gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    border: none;
+}
+
+.player-names {
+    max-width: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.player-names button {
+    font-size: 30px;
+    text-shadow: rgba(255, 255, 255, 0.187) 1px 0 2px;
+    background: linear-gradient(90deg, #ff2f00, #f3ae46); /* Initial gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border: solid rgba(128, 13, 0, 0.596) 5px;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.player-names button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 19, 19, 0.988);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.player-names button:hover {
+    color: #fff; /* Change text color */
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Change gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-color: #0072ff; /* Change border color */
+}
+
+.player-name {
+    font-size: 30px;
+    text-shadow: rgba(255, 255, 255, 0.187) 1px 0 2px;
+    background: linear-gradient(90deg, #ff2f00, #f3ae46); /* Initial gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border: solid rgba(128, 13, 0, 0.596) 5px;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.player-name::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 19, 19, 0.988);
+    border-radius: 10px;
+    z-index: -1;
+}

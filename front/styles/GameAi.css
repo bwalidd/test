@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/Ga Maamli');
+
+.bod{
+    height: 100vh;
+    margin: 0;
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/lloginpic.jpg') no-repeat center center / cover;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 4px #ff0000; /* Vibrant red border */
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Black to grey gradient */
+    padding: 20px;
+    animation: pulse-border 2s infinite;
+    width: 1000px;
+
+}
+
+.game-header{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.game-header button{
+    background-color: #ff0000; /* Vibrant red */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+@keyframes pulse-border {
+    0%, 100% {
+        border-color: #ff0000; /* Red */
+        box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        border-color: #b30000; /* Darker red */
+        box-shadow: 0px 10px 30px rgba(179, 0, 0, 0.8);
+    }
+}
+
+canvas {
+    display: block;
+    background: transparent; /* Grey to black gradient */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.6);
+}
+
+.game-over-text {
+    font-size: 3rem;
+    color: #ff0000; /* Vibrant red */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(179, 0, 0, 0.8);
+    animation: glow-text 1.5s infinite;
+}
+
+@keyframes glow-text {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(179, 0, 0, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(179, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 1);
+    }
+}
+
+

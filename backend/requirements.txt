@@ -1,0 +1,14 @@
+asgiref==3.8.1
+Django==4.2.14
+psycopg2-binary==2.9.9
+sqlparse==0.5.0
+typing_extensions==4.12.2
+djangorestframework-simplejwt
+django-cors-headers
+Pillow
+PyJWT
+channels
+channels_redis
+pyotp
+qrcode
+python-dotenv

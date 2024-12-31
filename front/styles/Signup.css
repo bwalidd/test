@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.cdnfonts.com/css/Ga Maamli'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ga Maamli';
+}
+
+.container-f {
+    background-image: url("../images/lloginpic.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background: linear-gradient(270deg, darkred, black);
+	color: antiquewhite;
+	font-family: 'Ga Maamli';
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeOut 0.5s ease-in-out 2.5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.big-text {
+    font-family: 'Ga Maamli', sans-serif;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+.signbg{
+    z-index: 2;
+}
+
+
+
+
+#login{
+    margin-top: 20px;
+    font-family: 'Montserrat';
+}
+
+#login a:hover {
+    color: #ff0000;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#btn-submit{
+    width: 100%;
+    background:linear-gradient(90deg, #1a1919 0%, #ff0000b6 50%, #1a1919 100%);
+}
+
+a.btn-secondary {
+    background-color: #6c757d;
+}
+
+a.btn-outline-light {
+    background-color: transparent;
+    border: 1px solid #f8f9fa;
+    color: #f8f9fa;
+}
+
+
+.form-control{
+    border-radius: 14px;
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.back-home a{
+    color: antiquewhite;
+    font-family: 'Ga Maamli';
+}

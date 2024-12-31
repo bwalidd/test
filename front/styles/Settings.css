@@ -1,0 +1,262 @@
+/* Settings.css */
+
+.bodyy {
+    font-family: Arial, sans-serif;
+    background: url("../images/lloginpic.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.settings-container {
+    z-index: 2;
+    background: linear-gradient(rgb(97, 11, 11) 20%, rgb(0, 0, 0, 0.6) 80%);
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 0 0 50px rgba(255, 255, 255);
+    padding: 20px;
+    width: 35%;
+    box-sizing: border-box;
+    height: max-content;
+}
+
+.pic-avatar{
+    border-radius: 10px;
+    font-family: 'Ga Maamli', sans-serif;
+    color: antiquewhite;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #630000;
+}
+
+.pic-avatar:hover{
+    background-color: #870000;
+
+}
+
+.upload-avatar {
+    display: none;
+}
+
+.settings-container h1 {
+    font-family: 'Ga Maamli', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: antiquewhite;
+    margin-bottom: 20px;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Ga Maamli', sans-serif;
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 19px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Avatar Section */
+.avatar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-preview {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    border: 2px solid #ddd;
+    margin-bottom: 8px;
+}
+
+.avatar-group input[type="file"] {
+    display: none;
+}
+
+.avatar-group label {
+    cursor: pointer;
+    color: #007bff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Save Button */
+.save-button {
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: antiquewhite;
+    background-color: #630000;
+    font-family: 'Ga Maamli', sans-serif;
+    border: 2px 2px 2px 2px solid #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.save-button:hover {
+    background-color: #870000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .settings-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .settings-container h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* Switch Styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #630000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(10px);
+}
+
+
+/* back home */
+
+.back-home {
+    text-align: center;
+    font-family: 'Ga Maamli', sans-serif;
+    font-size: 30px;
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 30px;   
+}
+
+.back-home a:hover {
+    color: #870000;
+}
+
+#two-fa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.two-fa h1{
+    font-family: 'Ga Maamli', sans-serif;
+    color: antiquewhite;
+    font-size: 20px;
+}
+
+.two-fa button{
+    padding: 12px;
+    font-size: 17px;
+    font-weight: normal;
+    color: antiquewhite;
+    background-color: #630000;
+    font-family: 'Ga Maamli', sans-serif;
+    border: 2px 2px 2px 2px solid antiquewhite;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    
+}
+
+.two-fa button:hover{
+    background-color: #870000;
+}
+

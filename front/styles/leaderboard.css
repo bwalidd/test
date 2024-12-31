@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.cdnfonts.com/css/Ga Maamli'); */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat';
+}
+
+.first-container {
+	position: absolute;
+	/* top: 0; */
+	/* left: 0; */
+	width: 100%;
+	height: 100vh;
+	background-image: url(../images/similar\ image\,\ in\ a\ dark\ fantasy\ theme\ related\ to\ ping\ pong\ game\,\ for\ landing\ page\ background.jpeg);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	/* background-color: rgba(240, 248, 255, 0.24); */
+}
+
+li{
+	display: flex;
+}
+
+li:hover{
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+li a{
+	display: flex;
+}
+
+
+
+
+.content {
+	/* background-color: rgba(255, 255, 255, 0.11);
+	backdrop-filter: blur(10px); */
+	position: relative;
+	z-index: 10;
+}
+
+.bodypage {
+	/* background-color: aquamarine; */
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
+
+.navbar {
+	/* background-color: red; */
+	justify-content: flex-end;
+}
+
+.navbar-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-img {
+	background: url('../images/bhazzout.jpeg');
+	width: 50px;
+	height: 50px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+}
+
+.search {
+	background: url('../images/search.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 40px;
+	height: 40px;
+}
+
+.notif {
+	margin-bottom: 20px;
+	background-image: url("../images/notif.svg");
+	background-size: contain;
+	background-position: center;
+	width: 40px;
+	height: 40px;
+}
+
+.side-nav {
+	overflow-y: auto;
+	width: 110px;
+	overflow-x: hidden;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	position: fixed;
+	padding: 30px 15px;
+	background: rgba(255, 255, 255, 0.034);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: width 0.4s;
+	border-right: solid rgba(255, 255, 255, 0.39) 1px;
+}
+
+.side-nav:hover {
+	width: 250px;
+}
+
+.sep {
+	border: solid rgba(255, 255, 255, 0.219) 1px;
+	width: 400px;
+	margin-left: -100px;
+}
+
+.logo {
+	width: 100px;
+	height: 90px;
+	margin-top: -20px;
+	background: url('../images/mini\ pongx.png');
+	/* background-color: red; */
+	background-position: center;
+	background-size: cover;
+	padding-left: 50px;
+	transition: width 0.3s, max-height 0.3s;
+}
+
+.side-nav:hover .logo {
+    width: 100%; /* Width of the logo on hover (relative to the side nav) */
+    height: 100px;
+	max-height: 100px; /* Maximum height of the logo on hover */
+    background: url('../images/pongx.png') no-repeat center center;
+    background-size: cover;
+}
+
+.side-nav li p {
+	white-space: nowrap;
+	display: none;
+}
+
+.side-nav:hover li p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px 0;
+}
+
+.side-nav:hover ul li img {
+	margin-right: 10px;
+	width: 40px;
+}
+
+ul {
+	list-style: none;
+	padding: 0 15px;
+}
+
+ul li {
+	margin: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	cursor: pointer;
+}
+
+ul li img {
+	margin-right: 10px;
+	width: 40px;
+}
+
+.elements {
+	flex-direction: column;
+	gap: 50px;
+}
+
+.elements h1 {
+	font-family: 'Ga Maamli';
+}
+
+.leader {
+	padding: 0;
+	background-color: rgba(58, 49, 49, 0.445);
+	backdrop-filter: blur(5px);
+	border-radius: 5px;
+	width: 50%;
+	box-shadow: 0 0 10px rgba(99, 99, 99, 0.1);
+	margin: 5rem auto;
+	max-height: 700px;
+	overflow-y: auto;
+	margin-left: 250px;
+	margin-right: 100px;
+}
+
+.leader h1 {
+    background-image: linear-gradient(to bottom, #5f0909, transparent);
+    color: #e4e3e3;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+	font-family: "Ga Maamli";
+}
+
+table {
+	width: 100%;
+}
+
+tr {
+	text-align: center;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+thead tr th {
+	font-family: 'Ga Maamli';
+	color: rgb(255, 255, 255);
+	font-size:larger;
+	padding: 0.5rem 1rem ;
+}
+
+
+tbody td {
+	padding: 1rem 1rem;
+}
+
+tbody .name {
+	color: white;
+	font-weight:light;
+	font-size: larger;
+	text-transform: uppercase;
+	padding: 0;
+}
+
+tbody .rank, tbody .score {
+	font-family: 'Ga Maamli';
+	font-size: larger;
+}
+
+tbody .name img {
+	height: 80px;
+	border-radius: 50%;
+}
+
+tbody tr:nth-child(even) {
+	background-image: linear-gradient(to bottom, rgba(46, 42, 42, 0.562),  rgba(46, 42, 42, 0.623), rgba(46, 42, 42, 0.562));
+}
+
+tbody tr:nth-child(odd):first-of-type {
+	background-image: linear-gradient(to bottom, transparent,  rgba(46, 42, 42, 0.623), rgba(46, 42, 42, 0.562));
+}
+
+tbody tr:nth-child(odd) {
+	background-image: linear-gradient(to bottom, rgba(46, 42, 42, 0.562),  rgba(46, 42, 42, 0.623), rgba(46, 42, 42, 0.562));
+}
+
+tbody tr:last-child {
+	background-image: linear-gradient(to bottom, rgba(46, 42, 42, 0.562),  transparent);
+}
+
+.name {
+	text-align: left;
+}
+
+td {
+	padding: 1rem;
+}
+
+::-webkit-scrollbar {
+	width: 1em;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(28, 28, 29);
+	border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(63, 61, 61, 0.856);
+	border-radius: 100vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(250, 235, 215, 0.158);
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 100vh; /* Full height */
+    position: fixed;
+    background: #1e1e2f;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-logo {
+    width: 100%;
+    height: 80px;
+    background: url('../images/sidenav-img/logo.png') no-repeat center center;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    color: #ffffff;
+    transition: background 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background: #35355e;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.sidebar-menu p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.sidebar-separator {
+    width: 80%;
+    height: 1px;
+    background: #ffffff;
+    opacity: 0.2;
+    margin: 20px 0;
+}

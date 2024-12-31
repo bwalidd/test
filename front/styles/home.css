@@ -1,0 +1,748 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+
+.play-form-container.hidden {
+  display: none;
+}
+
+
+.top-bar{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(rgba(111, 4, 4, 0.5) 30%, rgba(0, 0, 0, 0.6) 80%);
+  box-shadow: 1px 3px 0px rgba(255, 217, 0, 0.451);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.close-icon {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  font-size: xx-large;
+  right: 20px;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+
+.close-icon:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+
+.play-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.play-form {
+  background: linear-gradient(rgba(111, 4, 4, 0.5) 30%, rgba(0, 0, 0, 0.6) 80%);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 750px;
+  width: 40%;
+}
+
+.play-form form{
+  height: 100%;
+  display: flex;
+
+}
+
+.play-form h2, form h3{
+  color: antiquewhite;
+  font-family: 'Ga Maamli';
+  text-shadow: rgba(255, 204, 0, 0.614) 1px 0 10px;
+}
+
+form .local-match{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+form .local-match:hover{
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+form .computer-match:hover{
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+form .computer-match{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  border-radius: 20px;
+  margin-left: 5px;
+
+}
+
+.avatar-match{
+  /* flex: 1; */
+  width: 70%;
+  height: 50%;
+  background: url('../images/teestng.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.avatar-match.ai{
+  background: url('../images/aiai.png');
+  background-size: cover;
+  background-position: center;
+  width: 60%;
+}
+
+.match button{
+  font-family: 'Ga Maamli';
+  font-size: large;
+  width: 200px;
+  color: antiquewhite;
+  background-color: rgba(82, 77, 77, 0.603);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.836);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+}
+
+.first-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/dark\ horror\ fantasy\,\ ping\ pong\ paddles\,\ replace\ the\ character\ with\ ping\ pong\ player.jpeg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+
+.custom-alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  background: linear-gradient(270deg, darkred, black);
+  color: antiquewhite;
+  font-family: 'Ga Maamli';
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeOut 0.5s ease-in-out 2.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+}
+
+
+.content {
+  position: relative;
+  z-index: 10;
+}
+
+li {
+  display: flex;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+li a {
+  display: flex;
+}
+
+.bodypage {
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 80px;
+  width: 280px;
+}
+
+.nav-link .greeting {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: antiquewhite;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-link .username strong{
+  font-family: 'Ga Maamli';
+  font-size: 17px;
+  color: antiquewhite;
+  text-align: center;
+  text-shadow: 1px 1px 2px #666, 
+               2px 2px 4px #333, 
+               3px 3px 6px #000;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.search {
+  background: url('../images/search.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: width 0.3s; /* Smooth transition for the hover effect */
+}
+
+.search-input {
+	width: 0;
+	opacity: 0;
+	transition: width 0.3s ease, opacity 0.3s ease;
+	height: 30px; /* Adjust as needed */
+	border: none; /* Remove border */
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8); /* Add small underline */
+	outline: none; /* Remove outline */
+	padding: 5px;
+	margin-left: 5px; /* Space between icon and input */
+	background-color: transparent; /* Make input background transparent */
+	color: #fff; /* Input text color */
+	border-radius: 0; /* Remove rounded corners */
+	position: absolute; /* Position it next to the search icon */
+	right: 60px; /* Starts right after the search icon */
+	pointer-events: none; /* Prevent interaction when not visible */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  position: relative; /* Ensure the input expands within the nav-link */
+}
+
+.nav-link:hover .search-input {
+	width: 200px; /* Expand the width on hover */
+	opacity: 1;
+	pointer-events: auto; 
+}
+
+.nav-link:hover .search {
+  width: 60px; /* Adjust size if you want a smaller icon when input expands */
+}
+
+.notif {
+  margin-bottom: 20px;
+  background-image: url("../images/notif.svg");
+  background-size: contain;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+
+.sep {
+  border: solid rgba(255, 255, 255, 0.219) 1px;
+  width: 400px;
+  margin-left: -100px;
+}
+
+
+.friend-request-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.friend-request-buttons button {
+  flex: 1; /* Make buttons take equal space */
+  margin: 0 5px; /* Add some space between buttons */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.friend-request-buttons .accept-btn {
+  color: antiquewhite;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.friend-request-buttons .reject-btn {
+  color: antiquewhite;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  
+}
+
+.accept-btn:hover {
+  background-color: rgb(46, 133, 46);
+  opacity: 0.9; /* Slightly fade on hover */
+}
+
+.reject-btn:hover {
+  background-color: crimson;
+  opacity: 0.9; /* Slightly fade on hover */
+}
+
+::placeholder {
+	color: rgb(255, 255, 255); /* Placeholder color */
+	font-weight: 400; /* Optional: adjust font weight of placeholder */
+}
+
+.bodypage ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+.bodypage ul li {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.bodypage ul li img {
+  margin-right: 20px;
+  width: 40px;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-0.3rem);
+  transition: transform 400ms;
+}
+
+.elements {
+  flex-direction: column;
+  gap: 50px;
+}
+
+.elements h1 {
+  font-family: 'Ga Maamli';
+}
+
+.fixed-bottom .btn {
+  font-family: 'Ga Maamli';
+  font-size: xx-large;
+  color: antiquewhite;
+  background-color: rgba(82, 77, 77, 0.603);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.836);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  width: 180px;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1050;
+  margin: 100px;
+}
+
+
+
+/* Styles for the search results */
+.search-results {
+  position: absolute;
+  top: 50px;
+  left: auto; /* Change to auto to not affect the left positioning */
+  right: 0; /* Aligns the container to the right */
+  width: 400px;
+  margin-right: 10px; /* Adds the right margin */
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  max-height: 140px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  z-index: 1000;
+  display: none;  /* Initially hidden */
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-results li:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Highlight on hover */
+}
+
+.search-results .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.search-results .username {
+  color: #fff; /* Text color */
+  font-weight: 500;
+}
+
+
+/*
+
+
+
+popup 
+
+
+
+*/
+.user-info-popup {
+  position: fixed; /* Fixed position ensures it's always relative to the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it horizontally and vertically */
+  background: linear-gradient(rgba(111, 4, 4, 0.5) 30%, rgba(0, 0, 0, 0.6) 80%);
+  border-radius: 15px;
+  padding: 30px;
+  width: 790px;
+  height: 590px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+  z-index: 1050; /* Increase z-index to ensure it stays on top of other elements */
+  display: none; /* Start as hidden */
+}
+
+.user-info-popup.show {
+  display: block; /* Show when 'show' class is added */
+}
+
+.user-info-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+
+.no-match{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Ga Maamli';
+  font-size: 20px;
+  color: antiquewhite;
+  text-shadow: 1px 1px 2px #666, /* Initial shadow with a slight blur */
+  2px 2px 4px #333, /* Darker shadow for more depth */
+  3px 3px 6px #000; /* Heavier shadow to intensify the effect */
+}
+
+.user-card{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-card h2 {
+  font-size: 30px;
+  font-family: 'Ga Maamli';
+  text-shadow: 1px 1px 2px #666, /* Initial shadow with a slight blur */
+  2px 2px 4px #333, /* Darker shadow for more depth */
+  3px 3px 6px #000; /* Heavier shadow to intensify the effect */
+  color: antiquewhite;
+}
+
+.user-actions{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-actions h2{
+  font-size: 10px;
+  font-family: 'Montserrat';
+}
+
+
+.user-actions button{
+  font-family: 'Ga Maamli';
+  color: antiquewhite;
+  background-color: rgba(82, 77, 77, 0.603);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.836);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+}
+
+.request-text{
+  font-size: x-large;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.user-details h2 {
+  margin: 0;
+}
+
+.user-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.popup-title{
+  font-family: 'Ga Maamli';
+  font-size: 20px;
+  color: rgba(196, 196, 196, 0.803);
+  text-align: center;
+  margin-top: 20px;
+}
+.user-stats{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.user-stats .stat h3{
+  font-family: 'Ga Maamli';
+  font-size: 25px;
+  color: antiquewhite;
+}
+
+.user-stats .stat p{
+  font-family: 'Ga Maamli';
+  font-size: 25px;
+  color: antiquewhite;
+}
+
+.stat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .latest-matches .match{
+  display: none;
+} */
+
+
+.latest-matches .match{
+  margin: 10px;
+  display: flex;
+  width: 100%;
+  height: 200px;
+}
+
+.latest-matches .match ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.latest-matches .match li{
+  padding: 10px;
+  margin: 10px;
+  width: 120px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.latest-matches .match li .match-avatar{
+  background-image: url('../images/bhazzout.jpeg');
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.latest-matches .match li .match-username{
+  font-family: 'Montserrat';
+  font-size: 13px;
+  color: antiquewhite;
+}
+
+
+.latest-matches .match li .match-result{
+  font-family: 'Montserrat';
+  font-size: 13px;
+  color: antiquewhite;
+}
+
+#popup-username{
+  margin-left: 20px;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  color: antiquewhite;
+}
+
+
+/* side bar */
+
+
+.side-nav {
+  overflow-y: auto;
+  width: 250px;
+  overflow-x: hidden;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  padding: 30px 15px;
+  background: rgba(255, 255, 255, 0.034);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.4s;
+  border-right: solid rgba(255, 255, 255, 0.39) 1px;
+}
+
+.side-nav .logo {
+  width: 400px;
+  height: 400px;
+  background: url('../images/file.png') ;
+  /* background-color: red; */
+  background-size: contain;
+  position: relative;
+  margin-top: -50px;
+  margin-left: -100px;
+  left: 0;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav ul li {
+  margin: 10px 0;
+}
+
+.side-nav ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: antiquewhite;
+  transition: background 0.3s, color 0.3s;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+
+
+.side-nav ul li img {
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.side-nav p {
+  font-family: 'Ga Maamli', sans-serif;
+  font-size: 20px;
+  color: antiquewhite;
+  text-align: center;
+  text-shadow: 1px 1px 2px #666, 2px 2px 4px #333, 3px 3px 6px #000;
+  margin: 0;
+}
+
+.side-nav li p {
+  font-size: 16px;
+  margin: 0;
+  text-align: left;
+}
+
+.side-nav .sep {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
